@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import global from "./global.css";
+import { Header } from "./components/header/Header";
+import { Progress, ProgressBar } from "./components/ProgressBar/Progress";
+import { Filters } from "./components/Filters/Filters";
 
-function App() {
+const SMain = styled.main`
+  display: inline-block;
+  margin: auto;
+  width: 800px;
+  height: 650px;
+  background-color: #ffffff;
+  padding: 50px;
+`
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <SMain>
+      <Header/>
+      <Progress/>
+      <Filters/>
+    </SMain>
+  )
+};
 
 export default App;
